@@ -37,7 +37,7 @@ A robust, production-ready API runner that imports Postman collections and execu
 - **Language**: Go 1.24
 - **Framework**: Gin HTTP framework
 - **Database**: PostgreSQL 16.6
-- **Caching**: Redis (ready for future use)
+
 - **Migrations**: Goose
 - **Development**: Air (hot reload), Docker Compose
 
@@ -95,7 +95,7 @@ git clone <repository-url>
 cd "Postman Without bugs"
 ```
 
-2. **Start services (PostgreSQL + Redis)**
+2. **Start PostgreSQL**
 ```bash
 make dev-up
 ```
@@ -124,7 +124,6 @@ docker compose up --build
 This will:
 - Build the Go application
 - Start PostgreSQL
-- Start Redis
 - Run the application on port 8080
 
 ## API Endpoints

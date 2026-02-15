@@ -4,14 +4,14 @@
 
 ### Option 1: Development Mode (with hot reload)
 ```bash
-make dev-up          # Start PostgreSQL and Redis
+make dev-up          # Start PostgreSQL
 make migrate-up      # Run database migrations
 make dev             # Start app with hot reload (Air)
 ```
 
 ### Option 2: Direct Run
 ```bash
-make dev-up          # Start PostgreSQL and Redis
+make dev-up          # Start PostgreSQL
 make migrate-up      # Run database migrations
 go run ./cmd/app/main.go
 ```
@@ -76,7 +76,7 @@ make test             # Run tests
 make lint             # Run linter
 
 # Docker
-docker compose up -d postgres redis    # Start only DB services
+docker compose up -d postgres          # Start only DB services
 docker compose up --build              # Build and start all
 docker compose down                    # Stop all services
 docker compose logs -f app             # View app logs
