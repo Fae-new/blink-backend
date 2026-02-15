@@ -1,0 +1,76 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# Air (hot reload) temporary files
+tmp/
+build-errors.log
+
+# Environment files
+.env
+.env.local
+.env.backup
+
+# Docker volumes
+docker/pgdata/
+docker/redisdata/
+
+# Database dumps and schemas
+db-dumps/
+db-schema/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build
+/build/
+/bin/
+
+# Misc
+*.bak
+*.tmp
+
+# Ignore migrations if needed
+# migrations/
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+main
+dist/
+bin/
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+coverage.html
+coverage.out

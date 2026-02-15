@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "Sample API Test Collection",
+    "description": "A sample collection for testing the Postman runner",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Public APIs",
+      "item": [
+        {
+          "name": "Get JSON Placeholder Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/posts"
+          }
+        },
+        {
+          "name": "Get Single Post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/posts/1"
+          }
+        },
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}"
+            },
+            "url": "https://jsonplaceholder.typicode.com/posts"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Weather API",
+      "item": [
+        {
+          "name": "Get Random User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://randomuser.me/api/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GitHub API",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json"
+          }
+        ],
+        "url": "https://api.github.com/zen"
+      }
+    }
+  ]
+}
