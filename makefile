@@ -128,3 +128,12 @@ test:
 lint:
 	@echo "Running golangci-lint..."
 	@golangci-lint run --timeout 5m
+
+build-agent:
+	@echo "Building agent binaries..."
+	@mkdir -p downloads
+	@cd agent && make build-mac && mv bin/blink-agent-darwin-amd64 ../downloads/blink-agent-darwin-amd64
+	@cd agent && make build-mac-arm && mv bin/blink-agent-darwin-arm64 ../downloads/blink-agent-darwin-arm64
+	@cd agent && make build-windows && mv bin/blink-agent-windows-amd64.exe ../downloads/blink-agent-windows-amd64.exe
+	@cd agent && make build-linux && mv bin/blink-agent-linux-amd64 ../downloads/blink-agent-linux-amd64
+	@echo "✅ Agent binaries built and moved to downloads/"

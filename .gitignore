@@ -74,3 +74,7 @@ logs/
 # Test coverage
 coverage.html
 coverage.out
+
+# Agent binaries
+downloads/
+agent/bin/

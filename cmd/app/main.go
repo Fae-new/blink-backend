@@ -57,6 +57,9 @@ func main() {
 	// Health check endpoint (no rate limit)
 	router.GET("/health", handlers.HealthCheck)
 
+	// Serve agent downloads
+	router.Static("/downloads", "./downloads")
+
 	// API routes
 	api := router.Group("/api/v1")
 	{
